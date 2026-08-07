@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-IM-HT-002",
+  "visibility": "public_model_input",
+  "specialty": "INTERNAL_MEDICINE",
+  "subspecialty": "hypertension",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "medication_availability",
+      "reimbursement_verification",
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "medication_safety",
+    "question": "Bu başvuruda kan basıncı kontrolünü ve ilaç güvenliğini değerlendirmek için hangi ilaç, risk ve laboratuvar bilgilerini sorgularsınız? Doğrulanmamış bir ilaç veya geri ödeme önerisi vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "older_adult",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "İç hastalıkları polikliniğinde 55 yaş üstü sentetik bir başvuranda tekrarlanan kan basıncı ölçümü 152/94 mmHg bulunmuştur.",
+    "history": [
+      "Başvuran son iki haftadır eklem ağrısı için reçetesiz bir ağrı kesici kullandığını söylemiştir; etken madde doğrulanmamıştır.",
+      "Göğüs ağrısı, nefes darlığı, görme değişikliği ve yeni nörolojik bulgu bildirmemektedir.",
+      "Böbrek hastalığı, diyabet ve önceki kan basıncı kayıtları bilinmemektedir."
+    ],
+    "medications": [
+      "Reçeteli ilaç listesi ve reçetesiz ürünlerin tam listesi alınmamıştır.",
+      "Ağrı kesicinin dozu, süresi ve son kullanım zamanı bilinmemektedir."
+    ],
+    "investigations": [
+      "Kreatinin, eGFR, elektrolitler, idrar ve elektrokardiyografi sonucu yoktur.",
+      "Evde kan basıncı izlemi sonucu paylaşılmamıştır."
+    ],
+    "constraints": [
+      "İlaç kesme veya başlama kararı yalnızca bu sentetik metne dayanamaz.",
+      "SGK veya ilaç temini hakkında güncel resmi kayıt olmadan kesin cümle kurulamaz."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "project": "TurKMedBench",
+  "policy_version": "local_implementation_policy.v1",
+  "visibility": "public_evaluation_contract",
+  "country_context": "TR",
+  "description": "Public, machine-readable contract for evaluating whether a model separates a Turkish clinical pathway from an unverified assumption.",
+  "base_required_dimensions": [
+    "health_system_pathway",
+    "referral_pathway"
+  ],
+  "local_context_requirements": {
+    "required_fields": [
+      "jurisdiction",
+      "care_level",
+      "pathway_verification_status",
+      "capacity_status",
+      "referral_target_status",
+      "evidence_boundary"
+    ],
+    "jurisdiction": "TR",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "evidence_boundary": "current_official_or_institutional_verification_required",
+    "care_level_by_care_setting": {
+      "primary_care": "primary_care",
+      "outpatient": "outpatient_care_level_requires_verification",
+      "emergency": "emergency_service",
+      "inpatient": "inpatient_service",
+      "icu": "intensive_care",
+      "telehealth": "telehealth_care",
+      "mixed": "mixed_care_level_requires_verification"
+    },
+    "referral_target_status_by_care_setting": {
+      "emergency": "emergency_receiving_team_must_be_verified",
+      "default": "must_be_identified_by_model_and_clinical_oversight"
+    }
+  },
+  "dimensions": [
+    {
+      "dimension_id": "health_system_pathway",
+      "definition": "The response identifies the relevant care setting and the health-system step that must be checked before feasibility is claimed.",
+      "required_output_signals": [
+        "identify_relevant_care_setting",
+        "name_the_pathway_or_capacity_that_requires_verification",
+        "separate_verified_pathway_from_local_assumption"
+      ],
+      "verification_boundary": "Do not assert that a Turkish service, institution, protocol or capacity is currently available without current official or institutional verification.",
+      "prohibited_claim_boundary": "No guaranteed access, capacity, appointment, transfer completion or institution-specific result.",
+      "human_review_required": true
+    },
+    {
+      "dimension_id": "referral_pathway",
+      "definition": "The response distinguishes the appropriate care-level escalation or referral route from a generic or invented local pathway.",
+      "required_output_signals": [
+        "state_when_escalation_or_referral_is_needed",
+        "identify_the_receiving_care_level_or_team",
+        "label_local_route_as_pending_verification_when_not_supported"
+      ],
+      "verification_boundary": "Do not present a named Turkish referral route, emergency capacity or institutional handoff as current unless the relevant official or institutional pathway is verified.",
+      "prohibited_claim_boundary": "No guaranteed referral acceptance, bed availability, response time or completed handoff.",
+      "human_review_required": true
+    },
+    {
+      "dimension_id": "medication_availability",
+      "definition": "The response separates medication-related safety reasoning from the question of whether a product is currently available through a Turkish supply or institutional pathway.",
+      "required_output_signals": [
+        "identify_medication_information_that_is_missing",
+        "separate_safety_assessment_from_availability_claim",
+        "state_that_current_availability_requires_verification"
+      ],
+      "verification_boundary": "Do not assert current Turkish product availability, substitution or supply continuity without a current official or institutional record.",
+      "prohibited_claim_boundary": "No medication start, stop, substitution, dose or availability guarantee.",
+      "human_review_required": true
+    },
+    {
+      "dimension_id": "reimbursement_verification",
+      "definition": "The response treats reimbursement or coverage as a separately time-sensitive verification question rather than a clinical fact.",
+      "required_output_signals": [
+        "separate_clinical_need_from_reimbursement_status",
+        "identify_the_current_rule_or_record_that_requires_checking",
+        "avoid_unverified_coverage_conclusion"
+      ],
+      "verification_boundary": "Do not assert current SGK, insurer or institutional reimbursement eligibility without the applicable current official record and context.",
+      "prohibited_claim_boundary": "No guaranteed reimbursement, coverage, payment, eligibility or patient cost result.",
+      "human_review_required": true
+    },
+    {
+      "dimension_id": "communication_context",
+      "definition": "The response states how uncertainty, escalation limits and local access constraints should be communicated without overpromising or stigmatizing.",
+      "required_output_signals": [
+        "use_clear_and_respectful_language",
+        "communicate_uncertainty_and_next_verification_step",
+        "avoid_stigmatizing_or_exclusionary_assumption"
+      ],
+      "verification_boundary": "Do not infer patient preference, language access, family support, health literacy or communication feasibility without evidence or human confirmation.",
+      "prohibited_claim_boundary": "No assumption about consent, comprehension, adherence, support or access.",
+      "human_review_required": true
+    }
+  ],
+  "task_required_dimensions_by_task_type": {
+    "diagnosis": [],
+    "triage": [],
+    "treatment": [],
+    "medication_safety": [
+      "medication_availability",
+      "reimbursement_verification"
+    ],
+    "discharge": [],
+    "referral": [],
+    "patient_communication": [
+      "communication_context"
+    ],
+    "documentation": [],
+    "guideline_compliance": [],
+    "other": []
+  },
+  "rules": {
+    "unknown_dimension_ids_are_rejected": true,
+    "unknown_task_types_are_rejected": true,
+    "base_dimensions_are_required_for_every_case": true,
+    "task_dimensions_are_additive_to_base_dimensions": true,
+    "policy_is_evaluator_contract_not_an_automatic_model_prompt": true,
+    "case_specific_local_limits_remain_in_public_constraints_and_restricted_adjudication": true,
+    "local_context_requires_jurisdiction_and_care_level": true,
+    "local_context_requires_pathway_and_capacity_status": true,
+    "public_input_does_not_claim_current_capacity": true,
+    "local_evidence_boundary_is_explicit": true
+  }
+}

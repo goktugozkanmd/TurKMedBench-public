@@ -1,0 +1,75 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-EM-HT-002",
+  "visibility": "public_model_input",
+  "specialty": "EMERGENCY_MEDICINE",
+  "subspecialty": "severe_blood_pressure_triage",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "urgent",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu başvuruda yüksek kan basıncı değerini klinik bulgularla nasıl ayırır, hangi bilgileri hızla toplar ve hangi durumda kırmızı alana yükseltirsiniz? Otomatik ilaç veya geri ödeme sonucu vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Acil serviste tekrarlanan ölçümlerde kan basıncı 186/112 mmHg olan sentetik bir başvuranın genel durumu ilk bakışta stabildir.",
+    "history": [
+      "Hafif baş ağrısı dışında göğüs ağrısı, nefes darlığı, görme değişikliği, bilinç değişikliği veya fokal nörolojik bulgu bildirilmemiştir.",
+      "Kullanılan ilaçlar, ağrı veya kaygı düzeyi, böbrek hastalığı ve önceki kan basıncı kayıtları bilinmemektedir."
+    ],
+    "medications": [
+      "Antihipertansif ve reçetesiz ilaç listesi alınmamıştır."
+    ],
+    "investigations": [
+      "Nörolojik muayene, fundus değerlendirmesi, EKG, kreatinin ve elektrolit sonucu yoktur."
+    ],
+    "constraints": [
+      "Yüksek sayı tek başına hedef organ hasarı kanıtı değildir.",
+      "Kurumun triyaj ve gözlem protokolü sağlık profesyoneli tarafından doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

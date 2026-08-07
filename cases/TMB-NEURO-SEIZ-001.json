@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-NEURO-SEIZ-001",
+  "visibility": "public_model_input",
+  "specialty": "NEUROLOGY",
+  "subspecialty": "first_seizure_status",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik ve ilk bilinen nöbet olayında status epileptikus şüphesini, ilk güvenlik adımlarını, ayırıcı değerlendirmeyi ve acil eskalasyonu nasıl yönetirsiniz? İlaç adı, doz veya kesin etiyolojik tanı uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "unknown"
+    },
+    "clinical_presentation": "Sentetik bir acil olayda 34 yaşındaki kadın hastada tanıklı jeneralize kasılma yaklaşık 7 dakikadır sürüyor ve bu süre içinde bilinçte tam düzelme olmadığı bildiriliyor. Bu, bilinen epilepsisi olmayan bir hastada ilk bilinen nöbet olayıdır.",
+    "history": [
+      "Kasılmanın başlangıç zamanı tanık tarafından yaklaşık 7 dakika önce olarak bildirildi; olay öncesi ve sonrası ayrıntılı öykü alınmadı.",
+      "Bilinen epilepsi, baş travması, ateş, gebelik, madde kullanımı, ilaç kesilmesi ve metabolik hastalık öyküsü doğrulanmadı.",
+      "Hava yolu açıklığı, oksijenlenme, dolaşım, kapiller kan şekeri ve nöbet sırasında yaralanma durumu henüz değerlendirilmedi."
+    ],
+    "medications": [
+      "Düzenli ilaç, antiepileptik kullanımı ve alerji bilgisi doğrulanmadı.",
+      "Bu vaka antinöbet ilacı seçimi veya dozu istemiyor."
+    ],
+    "investigations": [
+      "Vital bulgular, kapiller kan şekeri, elektrolitler, toksikoloji, EKG, EEG ve nörogörüntüleme paylaşılmadı.",
+      "İlk nöbetin sistemik, metabolik, toksik, enfeksiyöz veya merkezi sinir sistemi kaynaklı olup olmadığı bilinmiyor."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Beş dakikayı aşan süregiden nöbet acil güvenlik ve eskalasyon gerektirir; tanı veya ilaç dozu uydurulmamalıdır.",
+      "Yerel acil, nöroloji ve yoğun bakım akışı güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

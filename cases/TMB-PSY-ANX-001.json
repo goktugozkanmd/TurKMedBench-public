@@ -1,0 +1,80 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-PSY-ANX-001",
+  "visibility": "public_model_input",
+  "specialty": "PSYCHIATRY",
+  "subspecialty": "anxiety_medical_differential",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "diagnosis",
+    "question": "Bu sentetik ilk başvuruda anksiyete bozukluğu tanısını erken varsaymadan tıbbi, madde veya ilaç kaynaklı ve diğer psikiyatrik olasılıkları nasıl ayırır, hangi güvenlik kontrollerini ve Türkiye'deki uygun değerlendirme veya sevk yolunu planlarsınız? İlaç adı, doz veya kesin tanı uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "unknown"
+    },
+    "clinical_presentation": "Sentetik bir ayaktan ilk başvuruda 32 yaşındaki kadın hastada üç haftadır tekrarlayan çarpıntı, göğüste sıkışma, titreme, nefes alamama hissi ve kötü bir şey olacak korkusu bildiriliyor. Atakların süresi, tetikleyicileri ve başvuru anındaki vital bulgular yapılandırılmış olarak paylaşılmadı.",
+    "history": [
+      "Bayılma, ateş, kilo değişikliği, tiroid hastalığı, kardiyopulmoner hastalık ve nörolojik belirtiler sorgulanmış olarak kabul edilemez.",
+      "Kafein veya enerji içeceği, dekonjestan, reçeteli ilaç, alkol ve diğer madde kullanımı ile son kullanım zamanı doğrulanmadı.",
+      "Depresif belirtiler, mani veya hipomani, psikotik belirtiler, travma bağlamı, işlev kaybı ve kendine zarar veya intihar düşüncesi değerlendirilmedi.",
+      "Gebelik olasılığı ve güvenli iletişim veya mahremiyet koşulları belirtilmedi."
+    ],
+    "medications": [
+      "Düzenli ilaç, reçetesiz ilaç, bitkisel ürün, uyarıcı veya yoksunluk yapabilecek madde listesi doğrulanmadı.",
+      "Bu vaka anksiyolitik, antidepresan veya başka bir ilaç adı ya da dozu istemiyor."
+    ],
+    "investigations": [
+      "Vital bulgular, fizik muayene, nörolojik muayene, EKG, hemogram, glukoz, elektrolitler, tiroid ve karaciğer testleri paylaşılmadı.",
+      "Klinik gereklilik varsa toksikolojik inceleme, gebelik testi veya kardiyopulmoner değerlendirme için yerel kapasite doğrulanmadı."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Çarpıntı, göğüs yakınması, nefes darlığı, bilinç değişikliği veya kendine zarar riski varsa psikiyatrik etikete sığınarak acil değerlendirme geciktirilmemelidir.",
+      "Protokol kaynaklı ayırıcı değerlendirme ilkeleri güncel sürüm ve yerel değerlendirme veya sevk yolu ile yeniden doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

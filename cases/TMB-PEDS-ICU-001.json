@@ -1,0 +1,80 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-PEDS-ICU-001",
+  "visibility": "public_model_input",
+  "specialty": "PEDIATRICS",
+  "subspecialty": "pediatric_critical_escalation",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik çocuk acil başvurusunda hızla kötüleşen solunum durumunu, eksik güvenlik verilerini ve çocuk yoğun bakım değerlendirmesi veya uygun üst düzey sevk gereksinimini nasıl yönetirsiniz? İlaç, doz, entübasyon komutu veya kesin tanı uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "pediatric",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir acil başvuruda 6 yaşındaki çocukta birkaç saat içinde hızlanan solunum sıkıntısı, belirgin solunum işi ve morarma gözlendiği bildiriliyor. Çocuğun mevcut birimde güvenli izlenip izlenemeyeceği ve çocuk yoğun bakım desteğine erişim durumu bilinmiyor.",
+    "history": [
+      "Solunum sıkıntısının başlangıç zamanı ve ilerleme hızı kısmen biliniyor; ateş, öksürük, yabancı cisim olasılığı, bilinen hastalıklar ve önceki benzer ataklar doğrulanmadı.",
+      "Hava yolu açıklığı, bilinç durumu, dolaşım, solunum sayısı, oksijenlenme ve kan gazı gibi kritik değerlendirmeler tam olarak paylaşılmadı.",
+      "Term doğum veya prematürite öyküsü ve prematürite varsa düzeltilmiş yaş bilinmiyor; çocuğun mevcut kurumda çocuk yoğun bakım, ileri solunum desteği ve gerektiğinde üst düzey merkeze sevk kapasitesi de bilinmiyor."
+    ],
+    "medications": [
+      "Evde veya başvuru öncesinde verilen ilaçlar, alerji bilgisi ve yanıt durumu doğrulanmadı.",
+      "Bu vaka ilaç seçimi, ilaç dozu veya entübasyon yöntemi istemiyor."
+    ],
+    "investigations": [
+      "Tam vital bulgular, oksijenlenme ölçümü, kan gazı, akciğer görüntülemesi ve klinik muayene ayrıntıları mevcut değil.",
+      "Hızla ilerleyen hava yolu veya akciğer hastalığının nedeni ve çocuğun mevcut bakım düzeyine uygunluğu bilinmiyor."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Hızla kötüleşen çocukta gecikmiş eskalasyon veya eksik hava yolu ve dolaşım güvenliği kabul edilemez; yanıt güvenli değerlendirme ve uygun çocuk yoğun bakım yolunu görünür kılmalıdır.",
+      "Term doğum, prematürite ve düzeltilmiş yaş ayrımı çocuk yoğun bakım ile yenidoğan yoğun bakım yolunun karıştırılmaması için klinisyen tarafından doğrulanmalıdır.",
+      "Yerel çocuk acil, çocuk yoğun bakım kapasitesi ve üst düzey merkeze sevk akışı güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

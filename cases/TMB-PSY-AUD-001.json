@@ -1,0 +1,81 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-PSY-AUD-001",
+  "visibility": "public_model_input",
+  "specialty": "PSYCHIATRY",
+  "subspecialty": "alcohol_withdrawal_escalation",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik başvuruda alkol yoksunluğu olasılığını ve şiddetini nasıl değerlendirir, yaşamı tehdit eden bulguları ve ayırıcı tanıları nasıl tarar, ayakta veya yatarak bakım ve Türkiye'deki uygun acil eskalasyon yolunu nasıl sınırlandırırsınız? Benzodiazepin, tiamin veya başka ilaç adı ve dozu vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "male",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir acil başvuruda 48 yaşındaki erkek hastanın uzun süredir her gün yüksek miktarda alkol kullandığı ve son alkol alımından yaklaşık 36 saat sonra başvurduğu bildiriliyor. Belirgin titreme, terleme, bulantı, çarpıntı ve yoğun huzursuzluk var; yakını son saatlerde hareket eden gölgeler gördüğünü ve zaman zaman yöneliminde bozulma olduğunu söylüyor.",
+    "history": [
+      "Günlük alkol miktarı, son kullanım saati, önceki yoksunluk dönemleri, yoksunluk nöbeti veya deliryum tremens öyküsü doğrulanmadı.",
+      "Baş düşmesi veya başka yaralanma, epilepsi, karaciğer hastalığı, elektrolit bozukluğu, enfeksiyon ve diğer tıbbi hastalıklar bilinmiyor.",
+      "Benzodiazepin, opioid, uyarıcı veya başka madde kullanımı ve son kullanım zamanı bilinmiyor.",
+      "Kendine zarar veya intihar riski, sosyal destek ve acil gözlem veya yakın takip olanağı değerlendirilmedi."
+    ],
+    "medications": [
+      "Düzenli ilaç, son alınan sedatif veya yoksunluk belirtilerini maskeleyebilecek ilaç listesi doğrulanmadı.",
+      "Bu vaka ilaç seçimi, benzodiazepin, tiamin veya başka bir ilaç dozu istemiyor."
+    ],
+    "investigations": [
+      "Hava yolu, solunum, dolaşım, bilinç, nörolojik muayene, yaralanma bulguları, vital bulgular ve kapiller glukoz henüz yapılandırılmış olarak kaydedilmedi.",
+      "CIWA-Ar, elektrolitler, karaciğer veya böbrek fonksiyonları, tam kan sayımı, EKG, alkol düzeyi ve toksikoloji sonuçları paylaşılmadı.",
+      "Yeni nöbet veya farklı nöbet paterni varsa EEG veya nörogörüntüleme gereksinimi ile yerel yoğun bakım kapasitesi bilinmiyor."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Konfüzyon, halüsinasyon, nöbet, instabil vital bulgu, sürekli kusma veya hızlı kötüleşme varsa psikiyatri polikliniği gibi gecikmiş bir yol önerilmemelidir.",
+      "Protokol kaynaklı bakım düzeyi ve eskalasyon ilkeleri güncel sürüm ve yerel acil, AMATEM veya yoğun bakım yolu ile yeniden doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

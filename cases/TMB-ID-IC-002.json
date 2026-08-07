@@ -1,0 +1,77 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-ID-IC-002",
+  "visibility": "public_model_input",
+  "specialty": "INFECTIOUS_DISEASES",
+  "subspecialty": "infection_control",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "communication_context",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "inpatient_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "inpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "documentation",
+    "question": "Bu sentetik yatış kaydında yatışta var olan enfeksiyon ve sağlık hizmeti ile ilişkili enfeksiyon ayrımını nasıl kurarsınız? Olay tarihini ve yedi günlük enfeksiyon penceresini hangi verilere dayanarak kaydedersiniz? Eksik bölgeye özgü tanı kriterlerini varmış gibi tamamlamayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "older_adult",
+      "sex_context": "female",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik yatan hasta kaydında hasta yatışın 4. takvim gününde yeni bir lokalize enfeksiyon bulgusu ile değerlendiriliyor. Yatış sırasında enfeksiyonun var olduğuna dair kayıt yok; ilk bulgunun yatışın 4. gününde saptandığı, ilk pozitif tanısal testin ise 5. günde alındığı bildiriliyor.",
+    "history": [
+      "Yatıştan önceki iki gün ve yatış günü için enfeksiyon kriteri karşılandığına dair kayıt bulunmuyor.",
+      "Aynı enfeksiyon için önceki bir olay ve tekrarlayan enfeksiyon zaman aralığı bilgisi paylaşılmadı.",
+      "Kurumun sürveyans birimi tarafından tamamlanmış bölgeye özgü tanı kriterleri henüz sunulmadı."
+    ],
+    "medications": [
+      "İlaç listesi verilmedi; bu vaka ilaç seçimi istemiyor."
+    ],
+    "investigations": [
+      "İlk lokalize bulgu yatışın 4. gününde, ilk pozitif tanısal test yatışın 5. gününde kaydedildi.",
+      "Tanısal testin türü, örneğin alınma saati ve bölgeye özgü kriterlerin tamamı paylaşılmadı."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve sürveyans veya klinik kayıt yerine geçmez.",
+      "Olay tarihi, yatış günü ve pencere hesabı kaynakla uyumlu şekilde; eksik kriterler ayrıca işaretlenerek kaydedilmelidir.",
+      "Yanıt kesin enfeksiyon tanısı üretmemelidir."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

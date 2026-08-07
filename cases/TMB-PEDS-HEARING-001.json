@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-PEDS-HEARING-001",
+  "visibility": "public_model_input",
+  "specialty": "PEDIATRICS",
+  "subspecialty": "pediatric_hearing_referral",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "referral",
+    "question": "Bu sentetik çocuk başvurusunda başarısız işitme taraması ve gelişimsel kaygı için tarama sonucunu doğrulayan, kapsamlı işitme değerlendirmesine ve uygun KBB veya odyoloji yönlendirmesine dayalı güvenli izlem yolunu nasıl kurarsınız? Kesin işitme kaybı tanısı, cihaz, implant veya tedavi önermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "pediatric",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir ayaktan başvuruda 2 yaşındaki çocuğun önceki işitme taramasında kaldı sonucu aldığı ve ailenin çocuğun bazı seslere yanıt vermediği ile konuşma gelişiminde yaşıtlarının gerisinde olabileceği konusunda kaygı bildirdiği belirtiliyor. Tarama kaydı ve ayrıntılı odyolojik değerlendirme henüz mevcut değil.",
+    "history": [
+      "Taramanın yöntemi, tarihi, tek kulak veya iki kulak sonucu ve yeniden tarama yapılıp yapılmadığı doğrulanmadı.",
+      "Ailenin işitme ve konuşma gelişimi kaygısı mevcut; yenidoğan dönemi taraması, risk faktörleri, geçirilmiş kulak hastalığı, ototoksik maruziyet ve gelişimsel öykü ayrıntılı değil.",
+      "Otoskopik muayene, çocuğun iletişim dili ve önceki sağlık kayıtları paylaşılmadı."
+    ],
+    "medications": [
+      "Düzenli ilaç, önceki kulak tedavileri ve alerji bilgisi doğrulanmadı.",
+      "Bu vaka işitme cihazı, koklear implant, ilaç veya cerrahi tedavi seçimi istemiyor."
+    ],
+    "investigations": [
+      "Tarama raporu, kullanılan test, ham sonuçlar, timpanometri ve tanısal odyolojik değerlendirme bulunmuyor.",
+      "Tarama sonucunun geçici orta kulak sorunu, test koşulları veya kalıcı işitme sorunu ile ilişkisi belirlenmiş değil."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Başarısız veya kaldı taraması tek başına kesin işitme kaybı tanısı değildir; uygun takip ve kapsamlı işitme değerlendirmesine yönlendirme geciktirilmemelidir.",
+      "KBB, odyoloji, çocuk gelişimi ve yerel sevk kapasitesi güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

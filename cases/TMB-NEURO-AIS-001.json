@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-NEURO-AIS-001",
+  "visibility": "public_model_input",
+  "specialty": "NEUROLOGY",
+  "subspecialty": "acute_ischemic_stroke",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik acil başvuruda ilk değerlendirmeyi, zaman kaydını, güvenlik kontrollerini ve Türkiye'deki uygun acil sevk veya eskalasyon planını nasıl kurarsınız? Tromboliz veya trombektomi uygunluğu hakkında kesin karar ve ilaç dozu vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "older_adult",
+      "sex_context": "male",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir acil başvuruda 67 yaşındaki erkek hastada yaklaşık 45 dakika önce başlayan sağ yüz ve kol güçsüzlüğü ile konuşma bozukluğu bildiriliyor. Yakını hastayı en son yaklaşık 45 dakika önce normal gördüğünü söylüyor. Hastanın hava yolu, dolaşımı ve nörolojik şiddeti henüz yapılandırılmış olarak değerlendirilmedi.",
+    "history": [
+      "Son normal görülme zamanı yaklaşık 45 dakika önce olarak bildirildi; kesin saat kaydı henüz yazılmadı.",
+      "Antikoagülan veya antiagregan kullanımı, yakın zamanda kanama ve önceki nörolojik olay öyküsü doğrulanmadı.",
+      "Yerel inme ünitesi veya kapsamlı inme merkeziyle 112 koordinasyonunun nasıl kurulacağı paylaşılmadı."
+    ],
+    "medications": [
+      "İlaç listesi ve alerji bilgisi doğrulanmadı.",
+      "Bu vaka trombolitik, antitrombotik veya başka ilaç dozu istemiyor."
+    ],
+    "investigations": [
+      "Kapiller kan şekeri, beyin görüntülemesi, EKG ve laboratuvar sonuçları henüz paylaşılmadı.",
+      "Kanama, metabolik inme taklitçisi ve reperfüzyon uygunluğu açısından gerekli bilgiler eksik."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "İnme ön tanısı ile acil değerlendirme ve sevk geciktirilmemeli, ancak kesin tanı veya reperfüzyon uygunluğu uydurulmamalıdır.",
+      "Yerel 112, inme merkezi ve hastane içi akış güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

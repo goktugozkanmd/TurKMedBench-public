@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-ID-IC-001",
+  "visibility": "public_model_input",
+  "specialty": "INFECTIOUS_DISEASES",
+  "subspecialty": "infection_control",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "mixed_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "mixed",
+  "acuity_band": "urgent",
+  "task": {
+    "task_type": "guideline_compliance",
+    "question": "Tanısı ve bulaş etkeni henüz bilinmeyen bu hastanın ambulans değerlendirmesi ve sağlık kuruluşuna teslimi için hangi enfeksiyon kontrol önlemlerini planlarsınız? İzolasyon, el hijyeni, kişisel koruyucu donanım, teslim ve araç temizliği başlıklarını ayrı yazın. Enfeksiyon tanısı veya ilaç dozu uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "male",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir ambulans değerlendirmesinde 58 yaşındaki erkek hastada 39,0 C ateş, öksürük ve kanlı balgam bildiriliyor. Etken, kesin tanı ve bulaş yolu henüz bilinmiyor.",
+    "history": [
+      "Belirtilerin başlangıç zamanı ve son temas öyküsü doğrulanmadı.",
+      "Ambulans içinde başka hasta veya refakatçi bulunup bulunmadığı net değil.",
+      "Aerosol oluşturan bir işlem gerekip gerekmeyeceği henüz belirlenmedi."
+    ],
+    "medications": [
+      "Düzenli ilaç ve alerji listesi doğrulanmadı.",
+      "Bu vaka ilaç veya tedavi dozu değerlendirmesi istemiyor."
+    ],
+    "investigations": [
+      "Etken, mikrobiyoloji sonucu, görüntüleme ve oksijen satürasyonu paylaşılmadı.",
+      "Yerel ambulans, teslim ve araç dekontaminasyon prosedürü paylaşılmadı."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Hastane içi enfeksiyon kontrol uygulaması ilgili kurumun güncel talimatıyla doğrulanmalıdır.",
+      "Yanıt kesin enfeksiyon tanısı veya özgül tedavi planı içermemelidir."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

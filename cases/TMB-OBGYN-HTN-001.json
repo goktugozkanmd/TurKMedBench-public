@@ -1,0 +1,81 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-OBGYN-HTN-001",
+  "visibility": "public_model_input",
+  "specialty": "OBSTETRICS_GYNECOLOGY",
+  "subspecialty": "postpartum_severe_hypertension_escalation",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik postpartum ağır hipertansiyon olasılığında tek ölçümü yanlış güvenceye çevirmeden hangi anne ve fetüs değerlendirmesi, nörolojik veya hava yolu güvenliği, organ etkilenmesi taraması, acil yardım ve bakım düzeyi eskalasyonu kurulmalıdır? Antihipertansif, magnezyum, başka ilaç, doz, doğum veya yoğun bakım yatış emri vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "not_pregnant"
+    },
+    "clinical_presentation": "Sentetik bir postpartum acil başvuruda tek ölçümde ağır aralıkta olabileceği bildirilen kan basıncı, geçmeyen baş ağrısı ve yeni görme değişikliği vardır. Ölçümün tekrarı, doğumdan sonra geçen süre ve annenin genel durumu kayda geçirilmemiştir.",
+    "history": [
+      "Kan basıncı uygun koşullarda tekrar edilmedi; önceki hipertansiyon, preeklampsi veya eklampsi, böbrek veya karaciğer hastalığı ve kullanılan ilaçlar bilinmiyor.",
+      "Bilinç, nöbet, fokal nörolojik bulgu, nefes darlığı, göğüs yakınması, sağ üst karın ağrısı, idrar miktarı ve sıvı dengesi yapılandırılmış biçimde değerlendirilmedi.",
+      "Proteinüri, hemogram, trombosit, böbrek veya karaciğer işlevi, elektrolitler ve diğer organ etkilenmesi verileri mevcut değil.",
+      "Fetal durum veya gebelik sonlanma bağlamı, perinatoloji, anestezi veya kritik bakım ve yerel acil sevk kapasitesi doğrulanmadı."
+    ],
+    "medications": [
+      "Antihipertansif, antikonvülzan, antikoagülan veya doğum sonu kullanılan diğer ilaçlar ve alerji bilgisi doğrulanmadı.",
+      "Bu vaka antihipertansif, magnezyum veya başka ilaç adı, doz, doğum ya da yoğun bakım yatış emri istemiyor."
+    ],
+    "investigations": [
+      "Seri kan basıncı, nabız, solunum, ateş, oksijenlenme ve bilinç izlemi paylaşılmadı.",
+      "İdrar çıkışı, laboratuvarlar, nörolojik değerlendirme, akciğer bulguları, fetal değerlendirme ve gerektiğinde görüntüleme sonuçları mevcut değil."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Şiddetli baş ağrısı ve yeni görme değişikliği, proteinüri veya tekrar ölçümü eksik olsa bile gecikmiş güvence veya ayaktan izlem gerekçesi yapılmamalıdır.",
+      "Antihipertansif, magnezyum, başka ilaç, doz, doğum veya yoğun bakım yatış emri verilmemelidir; yanıt yalnızca değerlendirme, acil yardım ve yerel eskalasyon sınırında kalmalıdır.",
+      "Güncel resmi rehber, perinatoloji, anestezi veya kritik bakım ve yerel acil sevk yolu release öncesi yeniden doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

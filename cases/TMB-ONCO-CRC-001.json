@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-ONCO-CRC-001",
+  "visibility": "public_model_input",
+  "specialty": "ONCOLOGY",
+  "subspecialty": "colorectal_red_flag_referral",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "urgent",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik ayaktan başvuruda açıklanamayan kansızlık, bağırsak alışkanlığı değişikliği, dışkıda kan ve kilo kaybı gibi alarm bulgularını nasıl önceliklendirir, acil durumları nasıl dışlar ve uygun kolorektal tanısal sevki nasıl planlarsınız? Kesin kanser tanısı, tedavi veya doz vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "older_adult",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Sentetik bir ayaktan başvuruda 59 yaşındaki erişkinde son dört ay içinde açıklanamayan demir eksikliği anemisi, bağırsak alışkanlığında yeni değişiklik, aralıklı dışkıda kan ve yaklaşık beş kilogram istemsiz kilo kaybı bildiriliyor. Hemodinamik durum, karın muayenesi ve tanısal endoskopi bilgisi paylaşılmıyor.",
+    "history": [
+      "Kanamanın miktarı ve rengi, dışkılama sıklığı, karın ağrısı, şişkinlik, kusma ve gaz veya dışkı çıkaramama durumu netleştirilmedi.",
+      "Hemoglobin düzeyi, aneminin süresi ve nedeni, önceki kolonoskopi veya tarama öyküsü ile aile kanser öyküsü verilmedi.",
+      "Antikoagülan veya antiagregan kullanımı, eşlik eden kardiyopulmoner hastalıklar ve işlem riskleri doğrulanmadı."
+    ],
+    "medications": [
+      "Düzenli ilaçlar ve kanama riskini etkileyebilecek ilaçlar doğrulanmadı.",
+      "Bu vaka antikanser ilaç, antibiyotik, destek tedavisi veya doz istemiyor."
+    ],
+    "investigations": [
+      "Hemogramın ayrıntıları, demir çalışmaları, vital bulgular ve böbrek veya karaciğer testleri paylaşılmadı.",
+      "Obstrüksiyon, perforasyon, ciddi aktif kanama veya periton irritasyonu için acil değerlendirme yapıldığına dair kayıt yok."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Alarm bulguları benign bir nedenle açıklanmış kabul edilmemeli; aynı zamanda sınırlı veriden kesin kanser tanısı çıkarılmamalıdır.",
+      "Gastroenteroloji, kolorektal cerrahi, endoskopi ve acil sevk akışı güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

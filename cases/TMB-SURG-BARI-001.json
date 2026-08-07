@@ -1,0 +1,80 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-SURG-BARI-001",
+  "visibility": "public_model_input",
+  "specialty": "SURGERY",
+  "subspecialty": "bariatric_preoperative_selection",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "referral",
+    "question": "Bu sentetik cerrahi değerlendirmesinde obezite veya metabolik cerrahi için uygunluğu belirlemeden önce hangi eksik verileri, kontrendikasyonları, multidisipliner ameliyat öncesi değerlendirmeyi ve merkez kapasitesini doğrulamak gerekir? Prosedür, ilaç, doz veya ameliyat komutu vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "unknown"
+    },
+    "clinical_presentation": "Sentetik bir ayaktan başvuruda erişkin bir kişi obezite veya metabolik cerrahi değerlendirmesi istemektedir. Vücut ağırlığının yüksek olduğu, obezite ile ilişkili olabilecek yakınmaların bulunduğu ve cerrahi seçeneğin sosyal çevrede önerildiği belirtilmektedir; ölçülmüş beden kütle indeksi, kilo seyri veya cerrahi hedef doğrulanmış değildir.",
+    "history": [
+      "Beden kütle indeksi, kilo seyri, bel çevresi ve daha önceki yaşam tarzı, beslenme veya diğer cerrahi dışı tedavilerin süresi ve yanıtı bilinmiyor.",
+      "Önceki anestezi veya hava yolu güçlüğü, venöz tromboemboli veya pulmoner emboli, kardiyopulmoner belirtiler, efor kapasitesi ve eşlik eden hastalıkların kontrol durumu doğrulanmadı.",
+      "Gebelik olasılığı veya yakın zamanda gebelik planı, aktif madde kullanımı, tedavi edilmemiş psikiyatrik durum, yeme davranışı, karar verme kapasitesi ve ameliyat sonrası takip desteği değerlendirilmedi.",
+      "Başvuran kişinin hangi sağlık kuruluşunda değerlendirileceği, merkezin ekipman, deneyimli ekip ve komplikasyon sonrası müdahale kapasitesi bilinmiyor."
+    ],
+    "medications": [
+      "Düzenli ilaçlar, reçetesiz ürünler, alerjiler ve kilo veya anestezi riskini etkileyebilecek tedaviler doğrulanmadı.",
+      "Bu vaka prosedür adı, ilaç seçimi, ilaç dozu veya ameliyat komutu istemiyor."
+    ],
+    "investigations": [
+      "Fizik muayene, antropometrik ölçümler, temel laboratuvarlar, beslenme durumu ve ilgili kardiyopulmoner değerlendirme sonuçları mevcut değil.",
+      "Preanestezik değerlendirme, hava yolu risk değerlendirmesi, psikiyatrik veya davranışsal değerlendirme ve gerekli uzman görüşleri tamamlanmış değil."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Eksik uygunluk verileri ve kontrendikasyon değerlendirmesi tamamlanmadan cerrahiye uygunluk, merkez seçimi veya ameliyat kararı kesinleştirilmemelidir.",
+      "Güncel resmi protokol sürümü, multidisipliner değerlendirme kapsamı ve Türkiye'deki yerel merkez veya sevk kapasitesi release öncesi yeniden doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

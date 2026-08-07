@@ -1,0 +1,81 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-OBGYN-PPH-001",
+  "visibility": "public_model_input",
+  "specialty": "OBSTETRICS_GYNECOLOGY",
+  "subspecialty": "postpartum_hemorrhage_triage",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "emergency_service",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "emergency_receiving_team_must_be_verified",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu sentetik postpartum kanama başvurusunda kan kaybını bekleyerek acil aktivasyonu geciktirmeden hangi anne değerlendirmesi, paralel yardım ve eskalasyon, neden araştırması, kayıt ve sevk sınırları kurulmalıdır? Uterotonik, traneksamik asit, magnezyum, antihipertansif, transfüzyon ünitesi, uterin masaj, tamponad, küretaj, embolizasyon, laparotomi, histerektomi veya yoğun bakım yatış emri adı ya da dozu vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "not_pregnant"
+    },
+    "clinical_presentation": "Sentetik bir acil başvuruda vajinal doğumdan kısa süre sonra devam eden parlak kırmızı vajinal kanama olduğu bildiriliyor. Kanamanın sürdüğü, annenin halsiz göründüğü ve doğum sonrası gözlem kaydının eksik olduğu belirtiliyor; güvenli kabul için yeterli veri yok.",
+    "history": [
+      "Doğumun zamanı ve şekli, plasentanın tam çıkıp çıkmadığı, doğum kanalında yaralanma, önceki kanama veya pıhtılaşma öyküsü ve gebelik riskleri doğrulanmadı.",
+      "Kan kaybı miktarı veya eğilimi, kullanılan ped veya giysi sayısı, pıhtı varlığı ve kanamanın devam hızı yapılandırılmış biçimde ölçülmedi.",
+      "Bilinç durumu, baş dönmesi, nefes darlığı, göğüs yakınması, karın ağrısı, uterus tonusu ve idrar çıkışı hakkında kayıt yok.",
+      "Kadın doğum, anestezi veya kritik bakım, kan bankası, ameliyathane, izlem ve üst basamak sevk kapasitesi doğrulanmadı."
+    ],
+    "medications": [
+      "Doğum sırasında veya sonrasında verilen tedaviler, alerjiler, antikoagülan kullanımı ve eşlik eden hastalıklar doğrulanmadı.",
+      "Bu vaka ilaç, transfüzyon, cihaz, prosedür veya operatif işlem komutu istemiyor."
+    ],
+    "investigations": [
+      "Kan basıncı, nabız, solunum, bilinç, oksijenlenme ve şok açısından seri değerlendirme sonuçları mevcut değil.",
+      "Hemogram, koagülasyon, fibrinojen, kan grubu veya uygun kan hazırlığı, uterus ve doğum kanalı muayenesi ile idrar izlemi hakkında sonuç yok."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Kan kaybı miktarı kesinleşmemiş olsa bile devam eden postpartum kanama acil değerlendirme ve yardım aktivasyonunu geciktirmemelidir.",
+      "Uterotonik, traneksamik asit, magnezyum, antihipertansif, transfüzyon birimi, uterin masaj, tamponad, küretaj, embolizasyon, laparotomi, histerektomi veya yoğun bakım yatış emri adı ya da dozu verilmemelidir.",
+      "Güncel resmi rehber, yerel kan bankası, ameliyathane, anestezi veya kritik bakım ve sevk yolu release öncesi yeniden doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

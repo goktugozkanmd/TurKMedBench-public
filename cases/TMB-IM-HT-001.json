@@ -1,0 +1,78 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-IM-HT-001",
+  "visibility": "public_model_input",
+  "specialty": "INTERNAL_MEDICINE",
+  "subspecialty": "hypertension",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "diagnosis",
+    "question": "Bu ilk başvuruda kan basıncı bulgusunu nasıl doğrular, hangi eksik bilgileri tamamlarsınız ve hangi durumda acil değerlendirmeye yönlendirirsiniz? Kesin tedavi veya geri ödeme sonucu uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Poliklinikte erişkin bir başvuranda iki koldaki ilk değerlendirme ölçümlerinin ortalaması 168/102 mmHg olarak kaydedilmiştir.",
+    "history": [
+      "Önceki kan basıncı ölçümleri bildirilmemiştir.",
+      "Baş ağrısı, göğüs ağrısı, nefes darlığı, görme değişikliği ve nörolojik bulgu sorgulaması henüz tamamlanmamıştır.",
+      "Bilinen böbrek, kalp damar veya serebrovasküler hastalık bilgisi yoktur."
+    ],
+    "medications": [
+      "Düzenli ilaç listesi doğrulanmamıştır.",
+      "Reçetesiz ilaç veya uyarıcı madde kullanımı bilinmemektedir."
+    ],
+    "investigations": [
+      "Evde kan basıncı izlemi veya ambulatuvar ölçüm sonucu yoktur.",
+      "Temel laboratuvar ve elektrokardiyografi sonucu paylaşılmamıştır."
+    ],
+    "constraints": [
+      "Tek bir başvuru kaydı klinik kararın tamamı değildir.",
+      "Yanıt, sağlık profesyoneli incelemesi ve kurumun güncel akışı ile sınırlandırılmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

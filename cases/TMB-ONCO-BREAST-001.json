@@ -1,0 +1,79 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-ONCO-BREAST-001",
+  "visibility": "public_model_input",
+  "specialty": "ONCOLOGY",
+  "subspecialty": "breast_diagnostic_pathway",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "referral",
+    "question": "Bu sentetik ayaktan başvuruda yeni meme kitlesi ve kuşkulu görüntüleme bulgusu için eksik bilgileri, güvenli tanısal yönlendirmeyi ve Türkiye'deki uygulanabilir sevk akışını nasıl kurarsınız? Kesin malignite tanısı, antikanser tedavi seçimi veya doz vermeyin.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "unknown"
+    },
+    "clinical_presentation": "Sentetik bir ayaktan başvuruda 47 yaşındaki kadın, sağ memede yaklaşık altı haftadır fark ettiği ve son iki haftada belirginleştiğini söylediği yeni bir kitle nedeniyle başvuruyor. Dış merkez görüntüleme raporunda kuşkulu solid lezyon için doku tanısı veya ileri meme değerlendirmesi önerildiği bildiriliyor; görüntülerin kendisi ve patoloji sonucu mevcut değil.",
+    "history": [
+      "Kitlenin büyüme seyri, ağrı, meme başı akıntısı, cilt veya meme başı değişikliği ve koltuk altı bulguları yapılandırılmış olarak kaydedilmedi.",
+      "Önceki meme görüntülemeleri, biyopsiler, aile kanser öyküsü, bilinen genetik risk ve gebelik veya emzirme durumu doğrulanmadı.",
+      "Kanama riskini artıran ilaçlar, alerjiler ve önceki girişimlerin ayrıntıları bilinmiyor."
+    ],
+    "medications": [
+      "Düzenli ilaç ve antikoagülan veya antiagregan kullanımı doğrulanmadı.",
+      "Bu vaka antikanser ilaç, tedavi rejimi veya doz istemiyor."
+    ],
+    "investigations": [
+      "Dış merkez raporunun tam metni, kullanılan görüntüleme yöntemi ve klinik görüntüleme uyumu paylaşılmadı.",
+      "Histopatoloji, biyopsi yöntemi, biyopsi güvenlik değerlendirmesi ve multidisipliner değerlendirme kaydı bulunmuyor."
+    ],
+    "constraints": [
+      "Vaka sentetiktir ve klinik kullanım için değildir.",
+      "Kitle kanser olarak etiketlenmemeli; uygun klinik ve görüntüleme korelasyonu ile tanısal sevk geciktirilmemelidir.",
+      "Yerel meme görüntüleme, biyopsi, patoloji ve konsey akışı güncel kurum prosedürüyle doğrulanmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

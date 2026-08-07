@@ -1,0 +1,78 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-CARD-ACS-001",
+  "visibility": "public_model_input",
+  "specialty": "CARDIOLOGY",
+  "subspecialty": "acute_coronary_syndrome",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "primary_care",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "primary_care",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "referral",
+    "question": "Bu başvuruda akut koroner sendrom olasılığını nasıl ele alır, hangi güvenlik kontrollerini tamamlarsınız ve Türkiye'deki uygun acil veya kardiyoloji yönlendirmesini nasıl açıklarsınız? İlaç dozu veya kesin tanı uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "older_adult",
+      "sex_context": "male",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Birinci basamak başvurusunda 64 yaşındaki erkek, yaklaşık yarım saattir devam eden göğüs ortasında baskı ve sol kola doğru yayılan rahatsızlık tarif ediyor.",
+    "history": [
+      "Soğuk terleme eşlik ettiği belirtiliyor.",
+      "Önceki kardiyovasküler hastalık, sigara öyküsü ve aile öyküsü henüz doğrulanmadı.",
+      "Bilinç, solunum sıkıntısı ve eşlik eden bulguların tam değerlendirmesi yapılmadı."
+    ],
+    "medications": [
+      "Düzenli ilaç listesi doğrulanmadı.",
+      "Alerji ve daha önce kullanılan reçetesiz ilaçlar bilinmiyor."
+    ],
+    "investigations": [
+      "Elektrokardiyografi sonucu paylaşılmadı.",
+      "Vital bulgular ve laboratuvar sonuçları paylaşılmadı."
+    ],
+    "constraints": [
+      "Tek bir ilk temas kaydı kesin tanı veya tedavi planı değildir.",
+      "Yanıt sağlık profesyoneli incelemesi ve güncel yerel sevk akışı ile sınırlandırılmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

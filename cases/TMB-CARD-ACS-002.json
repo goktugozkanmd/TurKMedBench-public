@@ -1,0 +1,78 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-CARD-ACS-002",
+  "visibility": "public_model_input",
+  "specialty": "CARDIOLOGY",
+  "subspecialty": "acute_coronary_syndrome",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway",
+      "communication_context"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "time_sensitive",
+  "task": {
+    "task_type": "diagnosis",
+    "question": "Hazımsızlık ve bulantı ile başvuran bu kişide akut koroner sendromu taklit eden veya eşlik eden durumları nasıl ayırır, hangi eksik bilgileri tamamlar ve acil yönlendirme eşiğini nasıl belirlersiniz? Kesin tanı veya ilaç dozu uydurmayın.",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "referral_or_escalation",
+      "evidence_and_source_limits",
+      "confidence"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "adult",
+      "sex_context": "female",
+      "pregnancy_context": "unknown"
+    },
+    "clinical_presentation": "Ayaktan başvuran erişkin bir kadın iki saattir süren hazımsızlık, bulantı ve belirgin halsizlik tarif ediyor; göğüs ağrısı olmadığını söylüyor.",
+    "history": [
+      "Nefes darlığı, terleme, baş dönmesi ve bayılma sorgulaması tamamlanmadı.",
+      "Kardiyovasküler risk faktörleri, diyabet öyküsü ve önceki benzer ataklar bilinmiyor.",
+      "Panik belirtileri veya hipoglisemi düşündürebilecek bağlam araştırılmadı."
+    ],
+    "medications": [
+      "Düzenli ilaç ve reçetesiz ürün listesi doğrulanmadı.",
+      "Alerji bilgisi paylaşılmadı."
+    ],
+    "investigations": [
+      "Kan basıncı, nabız ve solunum sayısı kaydedilmedi.",
+      "Elektrokardiyografi ve laboratuvar sonuçları yok."
+    ],
+    "constraints": [
+      "Atipik yakınma tek başına kardiyak nedeni dışlamaz.",
+      "Yanıt sağlık profesyoneli incelemesi ve güncel yerel sevk akışı ile sınırlandırılmalıdır."
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "human_authored",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}
