@@ -1,157 +1,167 @@
 {
-    "project":  "TurKMedBench",
-    "package_version":  "public-preview-v1",
-    "generated_at":  "2026-08-07T18:39:35.5373839Z",
-    "case_count":  22,
-    "specialty_count":  11,
-    "synthetic_cases_only":  true,
-    "patient_level_data_present":  false,
-    "clinical_use_prohibited":  true,
-    "files":  [
-                  {
-                      "path":  ".gitignore",
-                      "sha256":  "cbfde9d5f3e538498c2d3a8e1511c3f9caf731b78e2206114bd4e2224f3acd2d",
-                      "bytes":  56
-                  },
-                  {
-                      "path":  "cases/TMB-CARD-ACS-001.json",
-                      "sha256":  "b31b6499ddb0c5a345f0e5147ad881d34f805beb9e61e39aafea8915dbe4a883",
-                      "bytes":  3143
-                  },
-                  {
-                      "path":  "cases/TMB-CARD-ACS-002.json",
-                      "sha256":  "164cae26b4e7f0e283c73c5b42ecbc0bb3162dd8b183cc87f42982a9134a9819",
-                      "bytes":  3178
-                  },
-                  {
-                      "path":  "cases/TMB-EM-HT-001.json",
-                      "sha256":  "b22dc7b7ec80ed33d4d80c567936194cc49099371b98b75048b5e81f501e3f7b",
-                      "bytes":  3038
-                  },
-                  {
-                      "path":  "cases/TMB-EM-HT-002.json",
-                      "sha256":  "d0ab0a28e9f97009daaa9ddabe26a0a833ffeae72fbd410e622786204749c130",
-                      "bytes":  3034
-                  },
-                  {
-                      "path":  "cases/TMB-FAM-HT-001.json",
-                      "sha256":  "424aa7a52d5f998a67d328de090026ae3d5a97619d0f7b7c92f960042f754e3f",
-                      "bytes":  4059
-                  },
-                  {
-                      "path":  "cases/TMB-FAM-PREV-001.json",
-                      "sha256":  "21e7acd185e449ac7e997d9d1f14e088e4286b1fe7a2b045311c33c7730aaa4e",
-                      "bytes":  4109
-                  },
-                  {
-                      "path":  "cases/TMB-ID-IC-001.json",
-                      "sha256":  "8077ae991007e4b5c319aefc08b9b5443a90f7086fd6a805c4dd6ce64675ca31",
-                      "bytes":  3393
-                  },
-                  {
-                      "path":  "cases/TMB-ID-IC-002.json",
-                      "sha256":  "2cef9ef6dacdb99620ec2079484477f8c5f5b2a432f06e20e2dc9c9c26f4693f",
-                      "bytes":  3557
-                  },
-                  {
-                      "path":  "cases/TMB-IM-HT-001.json",
-                      "sha256":  "a65fdfe54b06339b67036b3ec5afa7cea0248b83938042dbe48043611bddc2a5",
-                      "bytes":  3167
-                  },
-                  {
-                      "path":  "cases/TMB-IM-HT-002.json",
-                      "sha256":  "c1306ed5dc424e98f460465eae20963a59e7ddc2e2ef32951b6797bc6d10ab90",
-                      "bytes":  3329
-                  },
-                  {
-                      "path":  "cases/TMB-NEURO-AIS-001.json",
-                      "sha256":  "c7200e5ac2b48bc034c2eb4be81f6b0f0b5a8fe76c6ae273526764f03cec7597",
-                      "bytes":  3682
-                  },
-                  {
-                      "path":  "cases/TMB-NEURO-SEIZ-001.json",
-                      "sha256":  "0db9366d47b778d6d90940e3e22198a7a594943c028cfe70ab20ae577d5fe878",
-                      "bytes":  3668
-                  },
-                  {
-                      "path":  "cases/TMB-OBGYN-HTN-001.json",
-                      "sha256":  "e540fff623d368d2dbca08692ea0ef7b45980706a054d0843e22ed70db7da9ce",
-                      "bytes":  4492
-                  },
-                  {
-                      "path":  "cases/TMB-OBGYN-PPH-001.json",
-                      "sha256":  "a418021103fac1d163f650592da7581e8163d2aa1fe0a1e4dd1568cee3733b13",
-                      "bytes":  4535
-                  },
-                  {
-                      "path":  "cases/TMB-ONCO-BREAST-001.json",
-                      "sha256":  "a29aacd54607ef51a026be0ea22f3195a5f004b1abc28106cbca36d66aee2414",
-                      "bytes":  3887
-                  },
-                  {
-                      "path":  "cases/TMB-ONCO-CRC-001.json",
-                      "sha256":  "4efc06cb028deeffff0ee6a95110fd5c394f97fde37417dde000b036d4a79c60",
-                      "bytes":  3953
-                  },
-                  {
-                      "path":  "cases/TMB-PEDS-HEARING-001.json",
-                      "sha256":  "765b8af0faf3cb9e52de3353e1f1b0ec67b6c83bf800981099354d123a4a850f",
-                      "bytes":  3994
-                  },
-                  {
-                      "path":  "cases/TMB-PEDS-ICU-001.json",
-                      "sha256":  "4b68857c6a670d27c522d31c945604e48d09a127645c0dd25d87c88f63fd97c2",
-                      "bytes":  4285
-                  },
-                  {
-                      "path":  "cases/TMB-PSY-ANX-001.json",
-                      "sha256":  "fd4e914ebec71d058ec7c7f7d4f8e51bfed2a58f489493ec36bac73a26e07876",
-                      "bytes":  4181
-                  },
-                  {
-                      "path":  "cases/TMB-PSY-AUD-001.json",
-                      "sha256":  "1fb13852547aac5bc69ccbb4c14197946b80b1b26a165d6ad4278dc5b4d224f6",
-                      "bytes":  4382
-                  },
-                  {
-                      "path":  "cases/TMB-SURG-AIRWAY-001.json",
-                      "sha256":  "1a1d2c9224be1644d1a8445b7f3629e57e4afcaef5c892f120e6381c58700a60",
-                      "bytes":  4474
-                  },
-                  {
-                      "path":  "cases/TMB-SURG-BARI-001.json",
-                      "sha256":  "5c87c2e7db7202725f16b6833995537334763ddb1fe8e908a28b0dc0dcc72b9f",
-                      "bytes":  4466
-                  },
-                  {
-                      "path":  "contracts/turkmedbench_local_implementation_policy_v1.json",
-                      "sha256":  "74c23c207190df869bf4524fcc343a3e9b57e964781ad29ceadd47d0e43d8a79",
-                      "bytes":  6510
-                  },
-                  {
-                      "path":  "contracts/turkmedbench_public_case_input_schema_v1.json",
-                      "sha256":  "43d4e906b3c5de0444f5b77852341677d0128e78ef556f3cacab58b7f44848b8",
-                      "bytes":  12359
-                  },
-                  {
-                      "path":  "docs/TurKMedBench_CLINICIAN_REVIEWER_INVITATION_PUBLIC_v1.md",
-                      "sha256":  "f7fbcbee5267d1e0add5df6b9ca71a9346761b9875464c1ba4473970ee354763",
-                      "bytes":  3476
-                  },
-                  {
-                      "path":  "docs/TurKMedBench_DATA_CARD_v1.md",
-                      "sha256":  "d63869666fbca70a6fd1a1fb6359ab04f90db124c5119d0310dbd9695e5800aa",
-                      "bytes":  2910
-                  },
-                  {
-                      "path":  "PACKAGE_STATUS.json",
-                      "sha256":  "b6c21227a19e8a31a4720ea1576a02ab22ab4a1cf321518b46b9c93ade7ae702",
-                      "bytes":  646
-                  },
-                  {
-                      "path":  "README.md",
-                      "sha256":  "35f785d296167c50de4dae2d5f1508ec5268da5ec6a2948058084057aeca14cb",
-                      "bytes":  1643
-                  }
-              ]
+    "project": "TurKMedBench",
+    "package_version": "public-preview-v1",
+    "generated_at": "2026-08-07T18:39:35.5373839Z",
+    "case_count": 84,
+    "specialty_count": 21,
+    "synthetic_cases_only": true,
+    "patient_level_data_present": false,
+    "clinical_use_prohibited": true,
+    "files": [
+        {
+            "path": ".gitignore",
+            "sha256": "cbfde9d5f3e538498c2d3a8e1511c3f9caf731b78e2206114bd4e2224f3acd2d",
+            "bytes": 56
+        },
+        {
+            "path": "PACKAGE_STATUS.json",
+            "sha256": "1d2075768c7f4abd66853e840a92b5a9febb15dbba3ab72d57e5aca6e13a1824",
+            "bytes": 646
+        },
+        {
+            "path": "README.md",
+            "sha256": "94bcc3c7a08682a56e5075c27e233c2e04459decd8494966d1885604762ab0d6",
+            "bytes": 1764
+        },
+        {
+            "path": "SHA256SUMS",
+            "sha256": "7d83ba73f3bb710fbf4c771d325008156f1d463b0ac18599684a3edbebec3529",
+            "bytes": 2882
+        },
+        {
+            "path": "cases/TMB-CARD-ACS-001.json",
+            "sha256": "6696908312a272e2be0fc920d9273f42fb217fdd1e8b1ef57c9fee64e93a74a2",
+            "bytes": 3065
+        },
+        {
+            "path": "cases/TMB-CARD-ACS-002.json",
+            "sha256": "78ed94a9dd6ea32981b7f0de07acd34b80e69ed386d8613f6aace247cc9b2568",
+            "bytes": 3100
+        },
+        {
+            "path": "cases/TMB-EM-HT-001.json",
+            "sha256": "7f6e33d0adcba4845117d93bfb0377e59d749bc592bc768864a2766957d9381c",
+            "bytes": 2962
+        },
+        {
+            "path": "cases/TMB-EM-HT-002.json",
+            "sha256": "895bc929fc2794b3688d6a13a2445ec67ec52be6185b1a7bcca32a7ef004d706",
+            "bytes": 2959
+        },
+        {
+            "path": "cases/TMB-FAM-HT-001.json",
+            "sha256": "dd7a1f1919f3e97c05387e77ce2406cda4809594be47ae98f24d516dc1077374",
+            "bytes": 3980
+        },
+        {
+            "path": "cases/TMB-FAM-PREV-001.json",
+            "sha256": "05e28642b074e9a9873a6671c42f932fc732a3ac16f779e2521a94162fa967f4",
+            "bytes": 4030
+        },
+        {
+            "path": "cases/TMB-ID-IC-001.json",
+            "sha256": "f20ef595c7b86fbb751e695c2ef6aef642d67a79e922d4a33d61e20743ae34fd",
+            "bytes": 3314
+        },
+        {
+            "path": "cases/TMB-ID-IC-002.json",
+            "sha256": "f31a64a14c4d836efe105c81a9e09a263625cfb0d742c6a2224f4c49f3fa8cb4",
+            "bytes": 3480
+        },
+        {
+            "path": "cases/TMB-IM-HT-001.json",
+            "sha256": "e48c2eb6850e81d21e0c88542148bf3d9d5c454eac713b905828a4e0faf4dce6",
+            "bytes": 3089
+        },
+        {
+            "path": "cases/TMB-IM-HT-002.json",
+            "sha256": "da46cd7b899d1bb74527ddc6624179fe7a3c68779c7cf4f8e502dff5d1c0a5eb",
+            "bytes": 3250
+        },
+        {
+            "path": "cases/TMB-NEURO-AIS-001.json",
+            "sha256": "d5a7a6d5b7d0bcb6b1de96d5c2a442394223a4f640e88637836cf96f6087cca1",
+            "bytes": 3603
+        },
+        {
+            "path": "cases/TMB-NEURO-SEIZ-001.json",
+            "sha256": "69f16c5ae86689f944b7f956a70ae4d3b81667f4bf2f566d0ada6201f2be2c48",
+            "bytes": 3589
+        },
+        {
+            "path": "cases/TMB-OBGYN-HTN-001.json",
+            "sha256": "ad4599314ea52bf8d6c1b5c01fc6e9f637f3e18875fa2181e1a7b5eb4990c055",
+            "bytes": 4411
+        },
+        {
+            "path": "cases/TMB-OBGYN-PPH-001.json",
+            "sha256": "3ae73eff906a306b911c9757455584764ea44889ed409babaf805becaefbc8e3",
+            "bytes": 4454
+        },
+        {
+            "path": "cases/TMB-ONCO-BREAST-001.json",
+            "sha256": "16718bd4249a7485380e43df079f2cc7fa0e0fb7dd628e44ed80105fc7dbb199",
+            "bytes": 3808
+        },
+        {
+            "path": "cases/TMB-ONCO-CRC-001.json",
+            "sha256": "f1dfe6a3ee8ddf8e7b578c7d4dedd7332a9c6a7c1d5ff693919a64a22e85c436",
+            "bytes": 3874
+        },
+        {
+            "path": "cases/TMB-PEDS-HEARING-001.json",
+            "sha256": "656178c98a5c4cf5132c48ac36ba4c16891160e2a70087ed1dbaabb5232ab083",
+            "bytes": 3915
+        },
+        {
+            "path": "cases/TMB-PEDS-ICU-001.json",
+            "sha256": "2fd22423f2546cbe0a4e3c51a1fdd48fdf493c00ee298325a4450e04aa355ade",
+            "bytes": 4205
+        },
+        {
+            "path": "cases/TMB-PSY-ANX-001.json",
+            "sha256": "73bd4eb350af718953c5823dcff374d136e5170af5b52c4e89ca177b5c76f05f",
+            "bytes": 4101
+        },
+        {
+            "path": "cases/TMB-PSY-AUD-001.json",
+            "sha256": "fe9bec88e91bac2bc35073f603caaa1e9d021f9d4c3852cb51a2f034a3c46eb9",
+            "bytes": 4301
+        },
+        {
+            "path": "cases/TMB-SURG-AIRWAY-001.json",
+            "sha256": "4de3f6738afe3af9334ec408f3340d445e7931c949be07bd52a7afb8c4f11090",
+            "bytes": 4394
+        },
+        {
+            "path": "cases/TMB-SURG-BARI-001.json",
+            "sha256": "5c0f4584c9fa0d6ac8b5a3a52b36cfab0ca1f4422c8715f1ead6537baeb3b122",
+            "bytes": 4386
+        },
+        {
+            "path": "contracts/turkmedbench_local_implementation_policy_v1.json",
+            "sha256": "fd7cc007301534ba8108504bfc6877c538868c6c4d6cf568e23516a94b744677",
+            "bytes": 6381
+        },
+        {
+            "path": "contracts/turkmedbench_public_case_input_schema_v1.json",
+            "sha256": "11140d7c9df49071f86c0d123c5b99f962371e6eb34c672287d176ca5532daba",
+            "bytes": 11898
+        },
+        {
+            "path": "docs/TurKMedBench_CLINICIAN_REVIEWER_INVITATION_PUBLIC_v1.md",
+            "sha256": "66224f91887ad93bb92e6fa17a2774b46d236a24780d58e2b4f0fd1d404e217e",
+            "bytes": 3427
+        },
+        {
+            "path": "docs/TurKMedBench_DATA_CARD_v1.md",
+            "sha256": "bb289d5dcaed32159a3cfe99791fec89f5b542df2289ee0e2f286023c06065ce",
+            "bytes": 2871
+        },
+        {
+            "path": "manifest/public_release_manifest_v1.json",
+            "sha256": "a1c20898f22e72880c87a80e4dc84b931be36a9c5b49ed765b16bd8231e68248",
+            "bytes": 7367
+        }
+    ]
 }

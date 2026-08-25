@@ -1,6 +1,6 @@
 # TurKMedBench Public Research Preview
 
-TurKMedBench is a clinician-led research project for Turkey-specific clinical AI evaluation. This public preview contains 22 synthetic case inputs across 11 specialties.
+TurKMedBench is a clinician-led research project for Turkey-specific clinical AI evaluation. This public preview currently tracks 84 synthetic case drafts across 21 specialties (wave-1 expansion applied 2026-08-22); the initially published case set contained 22 cases across 11 specialties.
 
 ## Current status
 
