@@ -1,0 +1,73 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-SURG-NPOCHECK-003",
+  "visibility": "public_model_input",
+  "specialty": "SURGERY",
+  "subspecialty": "perioperative_fasting_airway_check",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "inpatient",
+  "acuity_band": "routine",
+  "task": {
+    "task_type": "guideline_compliance",
+    "question": "Bu durumda operasyon güvenliği açısından hangi kontroller yapılmalıdır; açlık ihlali ve zor havayolu öngörüsü nasıl ele alınmalıdır?",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "not_specified",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Seçili cerrahisi sabah ilk operasyon olarak planlanan 44 yaşında hastanın gece yarısı çay içtiği hemşire devir tesliminde ortaya çıktı. Ayrıca hastanın geniş boyun yapısı ve sınırlı ağız açıklığı not edilmiş; zor havayolu öngörüsü anestezi formuna yazılmamış.",
+    "history": [
+      "Gece yarısı sıvı alımı bildirildi",
+      "Geniş boyun-sınırlı ağız açıklığı",
+      "Zor havayolu notu formda yok"
+    ],
+    "medications": [
+      "Sabah ilaçları talimatına uyulup uyulmadığı netleşecek"
+    ],
+    "investigations": [
+      "Ameliyat öncesi kontrol tamamlandı"
+    ],
+    "constraints": [
+      "Açlık kurallarına uyumsuzluk aspirasyon riskini değiştirir",
+      "Zor havayolu öngörüsü önceden plan gerektirir"
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "model_assisted_human_edited",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

@@ -10,8 +10,7 @@
     "country_context": "TR",
     "local_implementation_dimensions": [
       "health_system_pathway",
-      "referral_pathway",
-      "communication_context"
+      "referral_pathway"
     ]
   },
   "local_implementation_context": {
@@ -42,7 +41,7 @@
     "synthetic": true,
     "patient_data_status": "no_patient_level_data",
     "demographics": {
-      "age_band": "older_adult",
+      "age_band": "not_specified",
       "sex_context": "not_specified",
       "pregnancy_context": "not_applicable"
     },
@@ -71,7 +70,7 @@
     "human_review_required": true
   },
   "synthetic_provenance": {
-    "generation_method": "human_authored",
+    "generation_method": "model_assisted_human_edited",
     "phi_screen_status": "complete_no_patient_level_data",
     "near_duplicate_check": "complete_no_match",
     "legacy_overlap_check": "complete_no_match"

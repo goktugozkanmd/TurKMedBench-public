@@ -1,0 +1,74 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-IM-HTTARGET-005",
+  "visibility": "public_model_input",
+  "specialty": "INTERNAL_MEDICINE",
+  "subspecialty": "ht_comborbid_target_setting",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "routine",
+  "task": {
+    "task_type": "treatment",
+    "question": "Bu hastada kan basıncı hedefi nasıl belirlenmelidir; diyabet varlığı hedefi nasıl değiştirir?",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "not_specified",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "HT ve T2DM tanılı 54 yaşında erkek hastanın kan basıncı 150/95 mmHg civarında. İlaçlarını düzenli kullanıyor ancak diyabetli hastada hedef basıncın farklı olup olmadığını soruyor.",
+    "history": [
+      "HT ve T2DM",
+      "Ölçümler 150/95",
+      "Uyum iyi"
+    ],
+    "medications": [
+      "Antihipertansif düzenli"
+    ],
+    "investigations": [
+      "HbA1c üç ay içinde",
+      "Böbrek fonksiyonları güncel"
+    ],
+    "constraints": [
+      "Diyabetli hastada hedef daha sıkı olabilir",
+      "Klinisyen kararı gerekir"
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "model_assisted_human_edited",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

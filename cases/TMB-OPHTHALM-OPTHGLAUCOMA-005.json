@@ -1,0 +1,70 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-OPHTHALM-OPTHGLAUCOMA-005",
+  "visibility": "public_model_input",
+  "specialty": "OPHTHALMOLOGY",
+  "subspecialty": "glaucoma_screening_referral",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "primary_care",
+  "acuity_band": "routine",
+  "task": {
+    "task_type": "referral",
+    "question": "Glokom taramasında hangi testler kullanılır ve kimler risk altındadır?",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "not_specified",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "73 yaşında erkek; kalp yetmezliği ve Ailede glokom öyküsü bulunan hastada tarama tartışılıyor.",
+    "history": [
+      "Klinik öykü"
+    ],
+    "medications": [
+      "İlaç listesi"
+    ],
+    "investigations": [
+      "Tetkikler"
+    ],
+    "constraints": [
+      "Klinisyen değerlendirmesi şart"
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "model_assisted_human_edited",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

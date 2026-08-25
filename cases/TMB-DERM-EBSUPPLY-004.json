@@ -1,0 +1,74 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-DERM-EBSUPPLY-004",
+  "visibility": "public_model_input",
+  "specialty": "DERMATOLOGY",
+  "subspecialty": "eb_wound_supply_access",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "outpatient",
+  "acuity_band": "routine",
+  "task": {
+    "task_type": "medication_safety",
+    "question": "EB'de uygun pansuman malzemesinin temini ve geri ödemesi nasıl doğrulanmalıdır; uygunsuz malzemenin zararı nasıl önlenir?",
+    "required_output_sections": [
+      "primary_recommendation",
+      "clinical_rationale",
+      "missing_information",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "not_specified",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "EB tanılı dokuz yaşındaki hastanın ailesi non-adhezif pansuman malzemelerini eczanede bulamadıklarını, internetten pahalı ürünler sipariş ettiklerini ve maddi olarak sürdürülemez olduğunu söylüyor. Mevcut bandajların yapışması ciltte yeni büllere yol açıyor.",
+    "history": [
+      "Pansuman malzemesi temin sorunu",
+      "Uygunsuz bandajla cilt hasarı",
+      "Maddi sürdürülebilirlik endişesi"
+    ],
+    "medications": [
+      "Topikal ürünler mevcut",
+      "Non-adheziv örtü bulunamıyor"
+    ],
+    "investigations": [
+      "Malzeme ihtiyaç listesi yazılmamış"
+    ],
+    "constraints": [
+      "Yanlış malzeme doğrudan cilt travmasına yol açar",
+      "Temin ve geri ödeme kuralları varsayılmamalıdır"
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "model_assisted_human_edited",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

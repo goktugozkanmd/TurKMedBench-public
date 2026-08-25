@@ -1,0 +1,74 @@
+{
+  "project": "TurKMedBench",
+  "schema_version": "public_case_input.v1",
+  "case_id": "TMB-EM-CHESTTRI-004",
+  "visibility": "public_model_input",
+  "specialty": "EMERGENCY_MEDICINE",
+  "subspecialty": "chest_pain_ed_triage",
+  "language_context": {
+    "response_language": "tr",
+    "country_context": "TR",
+    "local_implementation_dimensions": [
+      "health_system_pathway",
+      "referral_pathway"
+    ]
+  },
+  "local_implementation_context": {
+    "jurisdiction": "TR",
+    "care_level": "outpatient_care_level_requires_verification",
+    "pathway_verification_status": "not_provided_in_public_input",
+    "capacity_status": "not_claimed_requires_current_verification",
+    "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
+    "evidence_boundary": "current_official_or_institutional_verification_required"
+  },
+  "care_setting": "emergency",
+  "acuity_band": "emergency",
+  "task": {
+    "task_type": "triage",
+    "question": "Bu başvuru triyahta nasıl önceliklendirilmelidir; hangi bilgilerin derhal aktarılması beklenir ve hangi adım gecikmemelidir?",
+    "required_output_sections": [
+      "primary_recommendation",
+      "referral_or_escalation",
+      "clinical_rationale",
+      "safety_and_harm_warnings",
+      "local_implementability",
+      "evidence_and_source_limits"
+    ]
+  },
+  "case_input": {
+    "synthetic": true,
+    "patient_data_status": "no_patient_level_data",
+    "demographics": {
+      "age_band": "not_specified",
+      "sex_context": "not_specified",
+      "pregnancy_context": "not_applicable"
+    },
+    "clinical_presentation": "Acil servis ön kaydına 55 yaşında erkek hasta göğüsünün orta kısmında yarım saattir süren baskı tarzı ağrı ve terleme olduğunu bildirerek başvuruyor. Triyaj hemşiresi hastayı nasıl önceliklendireceğini ve hangi bilgileri derhal hekime aktaracağını sorguluyor.",
+    "history": [
+      "Yarım saatlik baskı tarzı göğüs ağrısı",
+      "Terleme eşlik ediyor",
+      "Önceki benzer epizot sorgulanmalı"
+    ],
+    "medications": [
+      "Kronik ilaç listesi hızla derlenecek"
+    ],
+    "investigations": [
+      "Vital bulgular ölçülecek",
+      "EKG aciliyeti değerlendirilecek"
+    ],
+    "constraints": [
+      "Göğüs ağrısı en öncelikli triyaj kategorilerindendir",
+      "Bekleme salonuna gönderilmeden hekim görüşmesi sağlanmalıdır"
+    ]
+  },
+  "safety_boundary": {
+    "clinical_use_prohibited": true,
+    "human_review_required": true
+  },
+  "synthetic_provenance": {
+    "generation_method": "model_assisted_human_edited",
+    "phi_screen_status": "complete_no_patient_level_data",
+    "near_duplicate_check": "complete_no_match",
+    "legacy_overlap_check": "complete_no_match"
+  }
+}

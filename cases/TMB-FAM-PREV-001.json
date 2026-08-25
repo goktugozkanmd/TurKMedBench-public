@@ -10,13 +10,12 @@
     "country_context": "TR",
     "local_implementation_dimensions": [
       "health_system_pathway",
-      "referral_pathway",
-      "communication_context"
+      "referral_pathway"
     ]
   },
   "local_implementation_context": {
     "jurisdiction": "TR",
-    "care_level": "primary_care",
+    "care_level": "outpatient_care_level_requires_verification",
     "pathway_verification_status": "not_provided_in_public_input",
     "capacity_status": "not_claimed_requires_current_verification",
     "referral_target_status": "must_be_identified_by_model_and_clinical_oversight",
@@ -42,9 +41,9 @@
     "synthetic": true,
     "patient_data_status": "no_patient_level_data",
     "demographics": {
-      "age_band": "adult",
+      "age_band": "not_specified",
       "sex_context": "not_specified",
-      "pregnancy_context": "unknown"
+      "pregnancy_context": "not_applicable"
     },
     "clinical_presentation": "Sentetik bir aile sağlığı merkezi kaydında 57 yaşındaki kayıtlı kişinin son periyodik sağlık muayenesinin, aşı durumunun, kanser taramalarının, kronik hastalık tarama veya izlemlerinin ve önceki uzman sevklerine ait geri bildirimlerin görünür olmadığı fark ediliyor. Kişinin o gün akut yakınması bildirilmiyor.",
     "history": [
@@ -71,7 +70,7 @@
     "human_review_required": true
   },
   "synthetic_provenance": {
-    "generation_method": "human_authored",
+    "generation_method": "model_assisted_human_edited",
     "phi_screen_status": "complete_no_patient_level_data",
     "near_duplicate_check": "complete_no_match",
     "legacy_overlap_check": "complete_no_match"
